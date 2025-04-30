@@ -158,7 +158,8 @@
                         <div class="ft-footer-widget ul-li-block headline pera-content">
                             <div class="logo-widget">
                                 <div class="site-logo">
-                                    <a href="#"><img src="assets/img/logo/logo4.png" alt="" /></a>
+                                    <a href="{{ route('welcome') }}"><img src="assets/img/logo/logo3.png"
+                                            alt=""width="70px" /></a>
                                 </div>
                                 <div class="ft-footer-address">
                                     <span>Address: 27 Division St, New York, NY 10002, USA</span>
