@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
+            $table->string('phone_number')->nullable(); // Added phone number
             $table->string('email');
             $table->enum('shipment_type', ['By Air', 'By Ship', 'By Road']);
             $table->string('city_departure');
@@ -37,8 +38,12 @@ return new class extends Migration
             $table->string('current_location')->nullable();
             $table->string('tracking_id')->unique();
             $table->enum('status', ['Pending', 'In Transit', 'Delivered', 'Canceled'])->default('Pending');
+            $table->integer('box')->default(1); // Retained for boxes
+            $table->text('package_content')->nullable(); // Retained for package details
             $table->timestamps();
         });
+
+       
     }
 
     /**

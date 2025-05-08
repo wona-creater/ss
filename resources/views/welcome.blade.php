@@ -157,7 +157,7 @@
                                                 enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="ft-product-mesurment-form-input-area">
-                                                    <label class="ft-pm-title">Personal Data</label>
+                                                    <label class="ft-pm-title">Personal Details</label>
                                                     <div class="row">
                                                         <div class="col-lg-4">
                                                             <div class="ft-pm-input">
@@ -189,11 +189,21 @@
                                                                 @enderror
                                                             </div>
                                                         </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="ft-pm-input">
+                                                                <input type="text" name="phone_number"
+                                                                    placeholder="Your Phone Number"
+                                                                    value="{{ old('phone_number') }}" />
+                                                                @error('phone_number')
+                                                                    <span class="text-danger">{{ $message }}</span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
 
                                                 <div class="ft-product-mesurment-form-input-area">
-                                                    <label class="ft-pm-title">Shipment Data</label>
+                                                    <label class="ft-pm-title">Shipment Details</label>
                                                     <div class="row">
                                                         <div class="col-lg-4">
                                                             <div
@@ -231,6 +241,9 @@
                                                                 @enderror
                                                             </div>
                                                         </div>
+
+
+
                                                         <div class="col-lg-4">
                                                             <div
                                                                 class="ft-pm-input ft-select-option position-relative">
@@ -294,6 +307,27 @@
                                                                     accept="image/*"
                                                                     style=" width: 100%; padding-left: 10px; padding: 10px; font-size: 16px; color: #333;background-color: #fff; cursor: pointer; transition: border-color 0.3s ease; " />
                                                                 @error('images.*')
+                                                                    <span class="text-danger">{{ $message }}</span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+
+                                                        <div class="col-lg-4">
+                                                            <div class="ft-pm-input">
+                                                                <textarea name="package_content" placeholder="Package Details" rows="4" class="form-control">{{ old('package_content') }}</textarea>
+                                                                @error('package_content')
+                                                                    <span class="text-danger">{{ $message }}</span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="ft-pm-input">
+                                                                <input type="text" name="box"
+                                                                    placeholder="Number Of Boxes"
+                                                                    value="{{ old('box') }}" />
+                                                                @error('box')
                                                                     <span class="text-danger">{{ $message }}</span>
                                                                 @enderror
                                                             </div>
@@ -604,7 +638,7 @@
                             </div>
                         </div>
 
-                       
+
                     </div>
                 </div>
             </div>

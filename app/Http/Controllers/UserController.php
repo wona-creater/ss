@@ -32,7 +32,7 @@ class UserController extends Controller
 
 
 
-   public function store(StoreQuoteRequest $request)
+    public function store(StoreQuoteRequest $request)
     {
         $validated = $request->validated();
 

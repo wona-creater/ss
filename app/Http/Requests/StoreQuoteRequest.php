@@ -21,23 +21,27 @@ class StoreQuoteRequest extends FormRequest
      */
     public function rules(): array
     {
+      
+
         return [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'email', 'max:255'],
-            'shipment_type' => ['required', 'in:By Air,By Ship,By Road'],
-            'city_departure' => ['required', 'string', 'max:255'],
-            'delivery_city' => ['required', 'string', 'max:255'],
-            'incoterms' => ['required', 'in:EXW,FCA,FOB,CIF,DAP,DDP'],
-            'weight' => ['required', 'numeric', 'min:0'],
-            'height' => ['required', 'numeric', 'min:0'],
-            'width' => ['required', 'numeric', 'min:0'],
-            'length' => ['required', 'numeric', 'min:0'],
-            'express_delivery' => ['boolean'],
-            'insurance' => ['boolean'],
-            'packaging' => ['boolean'],
-            'images' => ['nullable', 'array', 'max:4'],
-            'images.*' => ['image', 'mimes:jpeg,png,jpg', 'max:2048'], // Max 2MB per image
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone_number' => 'nullable|string|max:20', // Validation for phone number
+            'shipment_type' => 'required|in:By Air,By Ship,By Road',
+            'city_departure' => 'required|string|max:255',
+            'delivery_city' => 'required|string|max:255',
+            'incoterms' => 'required|in:EXW,FCA,FOB,CIF,DAP,DDP',
+            'weight' => 'required|numeric|min:0|max:999999.99',
+            'height' => 'required|numeric|min:0|max:999999.99',
+            'width' => 'required|numeric|min:0|max:999999.99',
+            'length' => 'required|numeric|min:0|max:999999.99',
+            'express_delivery' => 'nullable|boolean',
+            'insurance' => 'nullable|boolean',
+            'packaging' => 'nullable|boolean',
+            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Max 2MB per image
+            'box' => 'required|integer|min:1', // Validation for number of boxes
+            'package_content' => 'nullable|string|max:1000', // Validation for package content
         ];
     }
 
