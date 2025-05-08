@@ -107,21 +107,21 @@
                                 <nav class="mobile-main-navigation clearfix ul-li">
                                     <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
                                         <li class="dropdown">
-                                            <a href="%21.html#">Home</a>
+                                            <a href="#">Home</a>
 
                                         </li>
                                         <li><a href="about.html">About</a></li>
                                         <li class="dropdown">
-                                            <a href="%21.html#">Products/Services</a>
+                                            <a href="##">Services</a>
 
                                         </li>
                                         <li class="dropdown">
-                                            <a href="%21.html#">Tracking</a>
+                                            <a href="#profile">Tracking</a>
 
                                         </li>
 
                                         <li class="dropdown">
-                                            <a href="%21.html#">Faq </a>
+                                            <a href="#">Faq </a>
 
                                         </li>
                                     </ul>
@@ -175,14 +175,14 @@
                             <div class="menu-widget">
                                 <h3 class="widget-title">Our Services</h3>
                                 <ul>
-                                    <li><a href="service-single.html">Air Freight</a></li>
-                                    <li><a href="service-single.html">Ocen Freight</a></li>
-                                    <li><a href="service-single.html">Warehousing</a></li>
+                                    <li><a href="#">Air Freight</a></li>
+                                    <li><a href="#">Ocen Freight</a></li>
+                                    <li><a href="#">Warehousing</a></li>
                                     <li>
-                                        <a href="service-single.html">Global stock transparency</a>
+                                        <a href="#">Global stock transparency</a>
                                     </li>
                                     <li>
-                                        <a href="service-single.html">Transport consolidation</a>
+                                        <a href="#">Transport consolidation</a>
                                     </li>
                                 </ul>
                             </div>
@@ -194,13 +194,13 @@
                             <div class="menu-widget">
                                 <h3 class="widget-title">Quick Links</h3>
                                 <ul>
-                                    <li><a href="service-single.html">How it Works</a></li>
-                                    <li><a href="service-single.html">Help Link</a></li>
+                                    <li><a href="#">How it Works</a></li>
+                                    <li><a href="#">Help Link</a></li>
                                     <li>
-                                        <a href="service-single.html">Terms & Conditions</a>
+                                        <a href="#">Terms & Conditions</a>
                                     </li>
-                                    <li><a href="service-single.html">Contact Us</a></li>
-                                    <li><a href="service-single.html">Privacy Policy</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
                                 </ul>
                             </div>
                         </div>

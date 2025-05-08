@@ -29,17 +29,18 @@
                                     <h3 class="widget-title">Package Details</h3>
                                     <ul>
                                         <li><a href="#">Personal Information<br> {{ $quote->email }}
-                                                <br>{{ $quote->first_name }}{{ $quote->last_name }} <br>
+                                                <br>{{ $quote->first_name }} {{ $quote->last_name }} <br>
                                                 {{ $quote->phone_number }}</a></li>
                                         <li><a href="#">Package Details<br> {{ $quote->package_content }} <br>Box
-                                                No.-{{ $quote->box }}</a></li>
-                                        <li><a href="#">Shipment Type-{{ $quote->shipment_type }} <br> City
-                                                Departure-{{ $quote->city_departure }} <br> Delivery
-                                                City-{{ $quote->delivery_city }} <br>Current
-                                                Location-{{ $quote->current_location ?? 'N/A' }} </a></li>
-                                        <li><a href="#">Weight-{{ $quote->weight }} Kg
-                                                <br>Height-{{ $quote->height }} Cm <br>Length-{{ $quote->length }} Cm
-                                                <br> Width-{{ $quote->width }} Cm </a></li>
+                                                No. - {{ $quote->box }}</a></li>
+                                        <li><a href="#">Shipment Type - {{ $quote->shipment_type }} <br> City
+                                                Departure - {{ $quote->city_departure }} <br> Delivery
+                                                City - {{ $quote->delivery_city }} <br>Current
+                                                Location - {{ $quote->current_location ?? 'N/A' }} </a></li>
+                                        <li><a href="#">Weight - {{ $quote->weight }} Kg
+                                                <br>Height - {{ $quote->height }} Cm <br>Length - {{ $quote->length }}
+                                                Cm
+                                                <br> Width - {{ $quote->width }} Cm </a></li>
                                         <li><a href="#">Status <br> {{ ucfirst($quote->status) }}</a></li>
                                         <li><a href="#">Amount <br>
                                                 ${{ number_format($quote->price ?? 0, 2) }}</a></li>
@@ -85,9 +86,13 @@
                                                     <div class="col-md-6">
                                                         <div class="ft-service-details-img">
                                                             <img src="{{ asset('storage/' . $image) }}"
-                                                                alt="Package Image"
-                                                                style="width: 300px; height: 200px; object-fit: cover;" />
+                                                                 alt="Package Image"
+                                                                 style="width: 300px; height: 200px; object-fit: cover;" />
                                                         </div>
+                                                    </div>
+                                                @else
+                                                    <div class="col-md-6">
+                                                        <p>No image available</p>
                                                     </div>
                                                 @endif
                                             @endforeach
