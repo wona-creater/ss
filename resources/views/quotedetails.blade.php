@@ -41,7 +41,8 @@
                                                 <br>Height - {{ $quote->height }} Cm <br>Length - {{ $quote->length }}
                                                 Cm
                                                 <br> Width - {{ $quote->width }} Cm </a></li>
-                                        <li><a href="#">Status <br> {{ ucfirst($quote->status) }}</a></li>
+                                        <li><a href="#">Status <br>Arrived </a></li>
+                                        {{-- {{ ucfirst($quote->status) }} --}}
                                         <li><a href="#">Amount <br>
                                                 ${{ number_format($quote->price ?? 0, 2) }}</a></li>
                                     </ul>
@@ -72,7 +73,8 @@
                                     {{ number_format($quote->height, 2) }} cm high,
                                     {{ number_format($quote->length, 2) }} cm long, and
                                     {{ number_format($quote->width, 2) }} cm wide. It’s currently
-                                    {{ ucfirst($quote->status) }}, and we’ll keep you posted on every step. The quote
+                                    {{-- {{ ucfirst($quote->status) }} --}}
+                                    Arrived, and we’ll keep you posted on every step. The quote
                                     is ${{ number_format($quote->price ?? 0, 2) }}, and we’re committed to getting your
                                     package there safely and on time. You’re in good hands!
                                 </p>
